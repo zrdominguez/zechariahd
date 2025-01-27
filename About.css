@@ -1328,6 +1328,8 @@
 .u-section-4 .u-image-1 {
   width: 492px;
   height: 273px;
+  transition-duration: 0.5s;
+  transform: rotate(0deg) scale(1) translateX(0px) translateY(0px);
   margin: 0 auto 0 27px;
 }
 
@@ -1408,6 +1410,8 @@
   width: 492px;
   height: 273px;
   object-position: 0% 50%;
+  transition-duration: 0.5s;
+  transform: rotate(0deg) scale(1) translateX(0px) translateY(0px);
   margin: 0 auto 0 27px;
 }
 
@@ -1488,6 +1492,8 @@
   width: 492px;
   height: 273px;
   object-position: 0% 50%;
+  transition-duration: 0.5s;
+  transform: rotate(0deg) scale(1) translateX(0px) translateY(0px);
   margin: 0 auto 0 27px;
 }
 
@@ -1572,6 +1578,8 @@
 .u-section-4 .u-image-22 {
   width: 492px;
   height: 273px;
+  transition-duration: 0.5s;
+  transform: rotate(0deg) scale(1) translateX(0px) translateY(0px);
   margin: 0 auto 0 27px;
 }
 
@@ -1884,4 +1892,60 @@
     width: 340px;
     margin-top: -193px;
   }
+}
+
+.u-section-4 .u-image-1,
+.u-section-4 .u-image-1:before,
+.u-section-4 .u-image-1 > .u-container-layout:before {
+  transition-property: fill, color, background-color, stroke-width, border-style, border-width, border-top-width, border-left-width, border-right-width, border-bottom-width, custom-border, borders, box-shadow, text-shadow, opacity, border-radius, stroke, border-color, font-size, font-style, font-weight, text-decoration, letter-spacing, transform, background-image, image-zoom, background-size, background-position;
+}
+
+.u-section-4 .u-image-1.u-image-1.u-image-1:hover {
+  transform: scale(1.1) translateX(0px) translateY(0px) !important;
+}
+
+.u-section-4 .u-image-1.u-image-1.u-image-1.hover {
+  transform: scale(1.1) translateX(0px) translateY(0px) !important;
+}
+
+.u-section-4 .u-image-8,
+.u-section-4 .u-image-8:before,
+.u-section-4 .u-image-8 > .u-container-layout:before {
+  transition-property: fill, color, background-color, stroke-width, border-style, border-width, border-top-width, border-left-width, border-right-width, border-bottom-width, custom-border, borders, box-shadow, text-shadow, opacity, border-radius, stroke, border-color, font-size, font-style, font-weight, text-decoration, letter-spacing, transform, background-image, image-zoom, background-size, background-position;
+}
+
+.u-section-4 .u-image-8.u-image-8.u-image-8:hover {
+  transform: scale(1.1) !important;
+}
+
+.u-section-4 .u-image-8.u-image-8.u-image-8.hover {
+  transform: scale(1.1) !important;
+}
+
+.u-section-4 .u-image-15,
+.u-section-4 .u-image-15:before,
+.u-section-4 .u-image-15 > .u-container-layout:before {
+  transition-property: fill, color, background-color, stroke-width, border-style, border-width, border-top-width, border-left-width, border-right-width, border-bottom-width, custom-border, borders, box-shadow, text-shadow, opacity, border-radius, stroke, border-color, font-size, font-style, font-weight, text-decoration, letter-spacing, transform, background-image, image-zoom, background-size, background-position;
+}
+
+.u-section-4 .u-image-15.u-image-15.u-image-15:hover {
+  transform: scale(1.1) !important;
+}
+
+.u-section-4 .u-image-15.u-image-15.u-image-15.hover {
+  transform: scale(1.1) !important;
+}
+
+.u-section-4 .u-image-22,
+.u-section-4 .u-image-22:before,
+.u-section-4 .u-image-22 > .u-container-layout:before {
+  transition-property: fill, color, background-color, stroke-width, border-style, border-width, border-top-width, border-left-width, border-right-width, border-bottom-width, custom-border, borders, box-shadow, text-shadow, opacity, border-radius, stroke, border-color, font-size, font-style, font-weight, text-decoration, letter-spacing, transform, background-image, image-zoom, background-size, background-position;
+}
+
+.u-section-4 .u-image-22.u-image-22.u-image-22:hover {
+  transform: scale(1.1) !important;
+}
+
+.u-section-4 .u-image-22.u-image-22.u-image-22.hover {
+  transform: scale(1.1) !important;
 }
