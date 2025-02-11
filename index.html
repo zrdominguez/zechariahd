@@ -204,18 +204,4 @@
         </a>
       </p>
     </section>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    document.querySelector("form").addEventListener("submit", function (event) {
-      event.stopPropagation(); // Stops jQuery or other scripts from intercepting
-    });
-  });
-</script>
-<script>
-  window.onload = function () {
-    if (window.Nicepage) {
-      window.Nicepage.FormHandler = function () {}; // Disable Nicepage's form handling
-    }
-  };
-</script>
 </body></html>
