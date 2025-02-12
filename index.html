@@ -167,12 +167,20 @@
                     <input type="hidden" name="formServices" value="d13b7f86-bc3f-2e1b-a9e5-83a5caf7b849">
                   </form>
 		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-	        <script>
-  		  grecaptcha.ready(function() {
-      		     grecaptcha.execute('6LffZtMqAAAAANIx21CRoMih401CbdqM4jyIae4F', {action: 'submit'}).then(function(token) {
-          		document.getElementById('g-recaptcha-response').value = token;
-      		     });
-  		  });
+
+		<script>
+  			window.onload = function () {
+    				if (typeof grecaptcha !== "undefined") {
+      					grecaptcha.ready(function() {
+        					grecaptcha.execute('6LffZtMqAAAAANIx21CRoMih401CbdqM4jyIae4F', {action: 'submit'})
+          					.then(function(token) {
+            						document.getElementById('g-recaptcha-response').value = token;
+          					});
+      					});
+    				} else {
+      					console.error("reCAPTCHA script failed to load.");
+    				}
+  			};
 		</script>
                 </div>
                 <div class="u-social-icons u-spacing-20 u-social-icons-1">
