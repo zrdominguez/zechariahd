@@ -169,18 +169,22 @@
 		<script src="https://www.google.com/recaptcha/enterprise.js?render=6LeVWtUqAAAAAJC_s6exzZiN7RYm0dfd5utxoHB2" async defer></script>
 
 		<script>
-  			window.onload = function () {
-    				if (typeof grecaptcha !== "undefined") {
+  			function loadRecaptcha() {
+    				if (typeof grecaptcha !== "undefined" && grecaptcha.ready) {
       					grecaptcha.ready(function() {
-        					grecaptcha.execute('6LeVWtUqAAAAAJC_s6exzZiN7RYm0dfd5utxoHB2', {action: 'submit'})
+        					grecaptcha.execute('6LffZtMqAAAAANIx21CRoMih401CbdqM4jyIae4F', {action: 'submit'})
           					.then(function(token) {
-            						document.getElementById('g-recaptcha-response').value = token;
+           						 document.getElementById('g-recaptcha-response').value = token;
           					});
       					});
     				} else {
-      					console.error("reCAPTCHA script failed to load.");
+      					console.warn("reCAPTCHA not ready, retrying...");
+      					setTimeout(loadRecaptcha, 500); 
     				}
-  			};
+  			}
+
+
+  			loadRecaptcha();
 		</script>
                 </div>
                 <div class="u-social-icons u-spacing-20 u-social-icons-1">
