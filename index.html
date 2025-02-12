@@ -173,7 +173,7 @@
     if (typeof grecaptcha !== "undefined" && grecaptcha.ready) {
       console.log("reCAPTCHA loaded!"); // Debugging message
       grecaptcha.ready(function() {
-        grecaptcha.execute('6LffZtMqAAAAANIx21CRoMih401CbdqM4jyIae4F', {action: 'submit'})
+        grecaptcha.execute('6LeVWtUqAAAAAJC_s6exzZiN7RYm0dfd5utxoHB2', {action: 'submit'})
           .then(function(token) {
             document.getElementById('g-recaptcha-response').value = token;
           });
