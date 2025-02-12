@@ -166,26 +166,28 @@
                     <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response">
                     <input type="hidden" name="formServices" value="d13b7f86-bc3f-2e1b-a9e5-83a5caf7b849">
                   </form>
-		<script src="https://www.google.com/recaptcha/enterprise.js?render=6LeVWtUqAAAAAJC_s6exzZiN7RYm0dfd5utxoHB2" async defer></script>
+		<script src="https://www.google.com/recaptcha/enterprise.js?render=6LeVWtUqAAAAAJC_s6exzZiN7RYm0dfd5utxoHB2" defer></script>
 
 		<script>
-  			function loadRecaptcha() {
-    				if (typeof grecaptcha !== "undefined" && grecaptcha.ready) {
-      					grecaptcha.ready(function() {
-        					grecaptcha.execute('6LffZtMqAAAAANIx21CRoMih401CbdqM4jyIae4F', {action: 'submit'})
-          					.then(function(token) {
-           						 document.getElementById('g-recaptcha-response').value = token;
-          					});
-      					});
-    				} else {
-      					console.warn("reCAPTCHA not ready, retrying...");
-      					setTimeout(loadRecaptcha, 500); 
-    				}
-  			}
+  function loadRecaptcha(retries = 10) {
+    if (typeof grecaptcha !== "undefined" && grecaptcha.ready) {
+      console.log("reCAPTCHA loaded!"); // Debugging message
+      grecaptcha.ready(function() {
+        grecaptcha.execute('6LffZtMqAAAAANIx21CRoMih401CbdqM4jyIae4F', {action: 'submit'})
+          .then(function(token) {
+            document.getElementById('g-recaptcha-response').value = token;
+          });
+      });
+    } else if (retries > 0) {
+      console.warn(`reCAPTCHA not ready, retrying... (${10 - retries} retries left)`);
+      setTimeout(() => loadRecaptcha(retries - 1), 1000); // Wait 1 second before retrying
+    } else {
+      console.error("reCAPTCHA failed to load after multiple attempts.");
+    }
+  }
 
-
-  			loadRecaptcha();
-		</script>
+  setTimeout(loadRecaptcha, 1000); // Initial delay of 1 second
+</script>
                 </div>
                 <div class="u-social-icons u-spacing-20 u-social-icons-1">
                   <a class="u-social-url" target="_blank" href="https://github.com/zrdominguez" title="Github">
